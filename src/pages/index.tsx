@@ -32,6 +32,8 @@ type HomeProps = {
 export default function Home({latestEpisodes, allEpisodes}: HomeProps) {
   const {play} = useContext(PlayerContext);
 
+  const episodeList = [...latestEpisodes, ...allEpisodes];
+
   return (
     <div className={styles.homepage}>
       <section className={styles.latestEpisodes}>
